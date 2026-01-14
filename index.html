@@ -938,6 +938,7 @@
         .final-cta h2 {
             font-size: 36px;
             margin-bottom: 12px;
+            color: var(--brand-white);
         }
         .final-cta p {
             color: rgba(255,255,255,0.85);
@@ -952,6 +953,27 @@
         }
         .final-cta .btn-secondary:hover {
             background: #f3f4f6;
+        }
+        .stop-sign {
+            width: 88px;
+            height: 88px;
+            margin: 0 auto 16px;
+            background: #dc2626;
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--brand-white);
+            font-weight: 800;
+            letter-spacing: 2px;
+            transform: rotate(45deg);
+            box-shadow: 0 10px 24px rgba(0,0,0,0.25);
+            border: 3px solid rgba(255,255,255,0.6);
+        }
+        .stop-sign span {
+            transform: rotate(-45deg);
+            display: block;
+            font-size: 14px;
         }
         .office-info {
             margin-top: 32px;
@@ -1625,8 +1647,9 @@
 
     <section class="final-cta">
         <div class="container">
-            <h2>Before You Decide, Get a Free Case Review</h2>
-            <p>Insurance companies move fast. Make sure you understand your options before you accept or sign anything.</p>
+            <div class="stop-sign"><span>STOP</span></div>
+            <h2>Don’t Accept Anything Until You Know Your Case Value</h2>
+            <p>Insurance companies move fast. Protect your claim before you sign or settle.</p>
             <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
                 <a href="tel:844-467-4335" class="btn-secondary" data-callrail-phone="844-467-4335">Talk to a Lawyer Now</a>
                 <a href="#free-evaluation" class="btn-primary">Check My Case</a>

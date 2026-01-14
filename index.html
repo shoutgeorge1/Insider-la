@@ -120,41 +120,48 @@
             color: var(--brand-navy);
             font-weight: 600;
             padding: 14px 28px;
-            border-radius: 6px;
+            border-radius: 8px;
             text-decoration: none;
             display: inline-block;
             border: none;
             cursor: pointer;
             font-size: 18px;
-            transition: background 0.3s ease;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(245, 196, 0, 0.3);
         }
         .btn-primary:hover {
             background: #e6b300;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(245, 196, 0, 0.4);
         }
         .btn-secondary {
             background: var(--brand-blue);
             color: var(--brand-white);
             font-weight: 600;
             padding: 14px 28px;
-            border-radius: 6px;
+            border-radius: 8px;
             text-decoration: none;
             display: inline-block;
             border: none;
             cursor: pointer;
             font-size: 18px;
-            transition: background 0.3s ease;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(18, 62, 122, 0.3);
         }
         .btn-secondary:hover {
             background: #0f3261;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(18, 62, 122, 0.4);
         }
         .sticky-header {
             position: sticky;
             top: 0;
             background: var(--brand-white);
             border-bottom: 2px solid var(--brand-border);
-            padding: 16px 0;
+            padding: 20px 0;
             z-index: 1000;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            backdrop-filter: blur(10px);
         }
         .header-content {
             display: flex;
@@ -178,11 +185,13 @@
             text-decoration: none;
             font-weight: 600;
             font-size: 16px;
-            transition: color 0.3s ease;
-            padding: 4px 0;
+            transition: all 0.3s ease;
+            padding: 8px 12px;
+            border-radius: 6px;
         }
         .header-nav a:hover {
             color: var(--brand-blue);
+            background: var(--brand-light-blue);
         }
         .header-phone {
             font-size: 20px;
@@ -236,6 +245,10 @@
         .section-with-bg > * {
             position: relative;
             z-index: 1;
+        }
+        .case-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.12);
         }
         .hero-content {
             display: grid;
@@ -295,8 +308,9 @@
         .accident-types .container {
             background: var(--brand-white);
             border-radius: 12px;
-            padding: 48px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            padding: 56px;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+            border: 2px solid var(--brand-light-blue);
         }
         .accident-grid {
             display: grid;
@@ -424,24 +438,35 @@
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            background: var(--brand-blue);
-            width: 80px;
-            height: 80px;
+            background: linear-gradient(135deg, var(--brand-blue), var(--brand-navy));
+            width: 90px;
+            height: 90px;
             border-radius: 50%;
             line-height: 1;
-            box-shadow: 0 4px 12px rgba(18, 62, 122, 0.3);
+            box-shadow: 0 6px 20px rgba(18, 62, 122, 0.4);
             margin: 0 auto 24px;
+            transition: transform 0.3s ease;
+        }
+        .process-step:hover .process-step-number {
+            transform: scale(1.1);
         }
         .worth-section {
-            background: var(--brand-white);
+            background: linear-gradient(135deg, var(--brand-light-blue), rgba(234, 242, 251, 0.3));
             text-align: center;
+        }
+        .worth-section .container {
+            background: var(--brand-white);
+            border-radius: 12px;
+            padding: 56px;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+            border: 2px solid var(--brand-light-blue);
         }
         .attorney-bio {
             background: var(--brand-white);
         }
         .trust-badges-section {
-            background: var(--brand-white);
-            padding: 48px 0;
+            background: linear-gradient(135deg, var(--brand-light-blue), rgba(234, 242, 251, 0.5));
+            padding: 64px 0;
         }
         .trust-badges-container {
             max-width: 1200px;
@@ -450,28 +475,36 @@
         }
         .trust-badges-headline {
             text-align: center;
-            font-size: 18px;
+            font-size: 20px;
             color: var(--brand-gray-700);
-            margin-bottom: 32px;
+            margin-bottom: 40px;
             font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
         .trust-badges-row {
             display: flex;
             justify-content: center;
             align-items: center;
-            gap: 40px;
+            gap: 48px;
             flex-wrap: wrap;
+            background: var(--brand-white);
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.08);
         }
         .trust-badge-img {
             height: 100px;
             width: auto;
             object-fit: contain;
             opacity: 0.85;
-            transition: opacity 0.3s ease, transform 0.3s ease;
+            transition: all 0.3s ease;
+            filter: grayscale(20%);
         }
         .trust-badge-img:hover {
             opacity: 1;
-            transform: scale(1.05);
+            transform: scale(1.1);
+            filter: grayscale(0%);
         }
         @media (max-width: 768px) {
             .trust-badges-row {
@@ -489,8 +522,12 @@
         }
         .attorney-photo {
             width: 100%;
-            border-radius: 8px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            border-radius: 12px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease;
+        }
+        .attorney-photo:hover {
+            transform: scale(1.02);
         }
         .attorney-details {
             background: var(--brand-white);
@@ -523,10 +560,18 @@
             margin-top: 24px;
         }
         .association-badge {
-            padding: 8px 16px;
+            padding: 10px 20px;
             background: var(--brand-light-blue);
-            border-radius: 4px;
+            border-radius: 8px;
             font-size: 14px;
+            font-weight: 600;
+            border: 1px solid var(--brand-blue);
+            transition: all 0.3s ease;
+        }
+        .association-badge:hover {
+            background: var(--brand-blue);
+            color: var(--brand-white);
+            transform: translateY(-2px);
         }
         .case-form {
             background: var(--brand-white);
@@ -553,11 +598,19 @@
         .form-select,
         .form-textarea {
             width: 100%;
-            padding: 12px;
-            border: 1px solid var(--brand-border);
-            border-radius: 6px;
+            padding: 14px 16px;
+            border: 2px solid var(--brand-border);
+            border-radius: 8px;
             font-family: inherit;
             font-size: 16px;
+            transition: all 0.3s ease;
+        }
+        .form-input:focus,
+        .form-select:focus,
+        .form-textarea:focus {
+            outline: none;
+            border-color: var(--brand-blue);
+            box-shadow: 0 0 0 3px rgba(18, 62, 122, 0.1);
         }
         .form-checkbox-group {
             display: flex;
@@ -680,11 +733,16 @@
             margin-top: 40px;
             border-radius: 12px;
             overflow: hidden;
-            box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.15);
             position: relative;
             padding-bottom: 56.25%;
             height: 0;
-            border: 3px solid var(--brand-light-blue);
+            border: 3px solid var(--brand-blue);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .map-container:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 32px rgba(0,0,0,0.2);
         }
         .map-embed {
             position: absolute;
@@ -884,7 +942,7 @@
                             </div>
                         </div>
                     </div>
-                    <div style="background: var(--brand-white); padding: 32px; border-radius: 12px; border-left: 5px solid var(--brand-blue); box-shadow: 0 4px 12px rgba(0,0,0,0.08); transition: all 0.3s ease;">
+                    <div class="case-card" style="background: var(--brand-white); padding: 32px; border-radius: 12px; border-left: 5px solid var(--brand-blue); box-shadow: 0 4px 12px rgba(0,0,0,0.08); transition: all 0.3s ease; cursor: pointer;">
                         <div style="display: flex; align-items: start; gap: 20px;">
                             <div style="width: 48px; height: 48px; min-width: 48px; background: linear-gradient(135deg, var(--brand-blue), var(--brand-navy)); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--brand-white); font-weight: 700; font-size: 24px; flex-shrink: 0; box-shadow: 0 4px 8px rgba(18, 62, 122, 0.3);">✓</div>
                             <div>
@@ -893,7 +951,7 @@
                             </div>
                         </div>
                     </div>
-                    <div style="background: var(--brand-white); padding: 32px; border-radius: 12px; border-left: 5px solid var(--brand-blue); box-shadow: 0 4px 12px rgba(0,0,0,0.08); transition: all 0.3s ease;">
+                    <div class="case-card" style="background: var(--brand-white); padding: 32px; border-radius: 12px; border-left: 5px solid var(--brand-blue); box-shadow: 0 4px 12px rgba(0,0,0,0.08); transition: all 0.3s ease; cursor: pointer;">
                         <div style="display: flex; align-items: start; gap: 20px;">
                             <div style="width: 48px; height: 48px; min-width: 48px; background: linear-gradient(135deg, var(--brand-blue), var(--brand-navy)); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--brand-white); font-weight: 700; font-size: 24px; flex-shrink: 0; box-shadow: 0 4px 8px rgba(18, 62, 122, 0.3);">✓</div>
                             <div>
@@ -902,7 +960,7 @@
                             </div>
                         </div>
                     </div>
-                    <div style="background: var(--brand-white); padding: 32px; border-radius: 12px; border-left: 5px solid var(--brand-blue); box-shadow: 0 4px 12px rgba(0,0,0,0.08); transition: all 0.3s ease;">
+                    <div class="case-card" style="background: var(--brand-white); padding: 32px; border-radius: 12px; border-left: 5px solid var(--brand-blue); box-shadow: 0 4px 12px rgba(0,0,0,0.08); transition: all 0.3s ease; cursor: pointer;">
                         <div style="display: flex; align-items: start; gap: 20px;">
                             <div style="width: 48px; height: 48px; min-width: 48px; background: linear-gradient(135deg, var(--brand-blue), var(--brand-navy)); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--brand-white); font-weight: 700; font-size: 24px; flex-shrink: 0; box-shadow: 0 4px 8px rgba(18, 62, 122, 0.3);">✓</div>
                             <div>
@@ -911,7 +969,7 @@
                             </div>
                         </div>
                     </div>
-                    <div style="background: var(--brand-white); padding: 32px; border-radius: 12px; border-left: 5px solid var(--brand-blue); box-shadow: 0 4px 12px rgba(0,0,0,0.08); transition: all 0.3s ease;">
+                    <div class="case-card" style="background: var(--brand-white); padding: 32px; border-radius: 12px; border-left: 5px solid var(--brand-blue); box-shadow: 0 4px 12px rgba(0,0,0,0.08); transition: all 0.3s ease; cursor: pointer;">
                         <div style="display: flex; align-items: start; gap: 20px;">
                             <div style="width: 48px; height: 48px; min-width: 48px; background: linear-gradient(135deg, var(--brand-blue), var(--brand-navy)); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--brand-white); font-weight: 700; font-size: 24px; flex-shrink: 0; box-shadow: 0 4px 8px rgba(18, 62, 122, 0.3);">✓</div>
                             <div>
@@ -989,12 +1047,12 @@
         </div>
     </section>
 
-    <section class="worth-section">
+    <section class="worth-section section-with-bg">
         <div class="container">
-            <h2>How Much Compensation Could You Receive?</h2>
-            <p style="font-size: 18px; color: var(--brand-gray-700); max-width: 800px; margin: 0 auto 24px;">Every case is unique. Compensation depends on your injuries, medical expenses, lost wages, and other damages. Our experienced accident attorneys will evaluate your case and fight for the maximum compensation you deserve.</p>
+            <h2 style="font-size: 42px; margin-bottom: 24px;">How Much Compensation Could You Receive?</h2>
+            <p style="font-size: 20px; color: var(--brand-gray-700); max-width: 800px; margin: 0 auto 40px; line-height: 1.7;">Every case is unique. Compensation depends on your injuries, medical expenses, lost wages, and other damages. Our experienced accident attorneys will evaluate your case and fight for the maximum compensation you deserve.</p>
             <div style="text-align: center;">
-                <a href="tel:8444674335" class="btn-primary" data-callrail-phone="844-467-4335">Get Free Case Evaluation</a>
+                <a href="tel:8444674335" class="btn-primary" data-callrail-phone="844-467-4335" style="font-size: 20px; padding: 18px 40px;">Get Free Case Evaluation</a>
             </div>
         </div>
     </section>

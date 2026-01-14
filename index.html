@@ -60,9 +60,19 @@
         section {
             padding: 80px 0;
         }
+        .section-content {
+            background: var(--brand-white);
+            border-radius: 12px;
+            padding: 48px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            margin-bottom: 32px;
+        }
         @media (max-width: 768px) {
             section {
                 padding: 48px 0;
+            }
+            .section-content {
+                padding: 32px 24px;
             }
         }
         h1, h2, h3, h4 {
@@ -282,6 +292,12 @@
         .accident-types {
             background: var(--brand-light-blue);
         }
+        .accident-types .container {
+            background: var(--brand-white);
+            border-radius: 12px;
+            padding: 48px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
         .accident-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -293,19 +309,19 @@
         }
         .accident-item {
             background: var(--brand-white);
-            padding: 24px 28px;
-            border-radius: 6px;
-            border-left: 4px solid var(--brand-blue);
-            box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-            transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+            padding: 28px 32px;
+            border-radius: 10px;
+            border-left: 5px solid var(--brand-blue);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
             display: flex;
             align-items: center;
-            gap: 16px;
+            gap: 20px;
             text-align: left;
         }
         .accident-item:hover {
-            transform: translateX(4px);
-            box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+            transform: translateY(-4px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
             border-left-color: var(--brand-accent-yellow);
         }
         .accident-icon {
@@ -352,9 +368,16 @@
         }
         .trust-card {
             text-align: center;
-            padding: 32px;
-            background: var(--brand-light-blue);
-            border-radius: 8px;
+            padding: 40px 32px;
+            background: var(--brand-white);
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            border: 2px solid var(--brand-light-blue);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .trust-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.12);
         }
         .trust-icon {
             font-size: 64px;
@@ -376,9 +399,15 @@
         }
         .process-step {
             background: var(--brand-white);
-            padding: 32px;
-            border-radius: 8px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+            border: 2px solid var(--brand-light-blue);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .process-step:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.15);
         }
         .process-step-img {
             width: 100%;
@@ -465,9 +494,10 @@
         }
         .attorney-details {
             background: var(--brand-white);
-            padding: 32px;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+            border: 2px solid var(--brand-light-blue);
         }
         .attorney-name {
             font-size: 32px;
@@ -504,10 +534,11 @@
         .form-container {
             max-width: 800px;
             margin: 0 auto;
-            background: var(--brand-light-blue);
-            padding: 48px;
-            border-radius: 8px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            background: var(--brand-white);
+            padding: 56px;
+            border-radius: 12px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+            border: 2px solid var(--brand-light-blue);
         }
         .form-group {
             margin-bottom: 24px;
@@ -555,10 +586,16 @@
         }
         .result-card {
             background: var(--brand-white);
-            padding: 40px 32px;
-            border-radius: 8px;
-            border: 2px solid var(--brand-border);
+            padding: 48px 32px;
+            border-radius: 12px;
+            border: 2px solid var(--brand-light-blue);
             text-align: center;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .result-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.12);
         }
         .result-amount {
             font-size: 48px;
@@ -592,10 +629,16 @@
             margin-top: 32px;
         }
         .review-card {
-            background: var(--brand-light-blue);
-            padding: 24px;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            background: var(--brand-white);
+            padding: 32px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            border-left: 4px solid var(--brand-blue);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .review-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.12);
         }
         .review-stars {
             color: var(--brand-accent-yellow);
@@ -613,9 +656,15 @@
         }
         .value-item {
             background: var(--brand-white);
-            padding: 32px;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            border: 2px solid var(--brand-light-blue);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .value-item:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.12);
         }
         .value-item::before {
             content: "✓";
@@ -647,11 +696,11 @@
         }
         .office-info {
             margin-top: 32px;
-            padding: 32px;
+            padding: 40px;
             background: var(--brand-white);
-            border-radius: 8px;
+            border-radius: 12px;
             border: 2px solid var(--brand-light-blue);
-            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
         }
         .office-info h3 {
             margin-bottom: 12px;
@@ -788,7 +837,7 @@
         </div>
     </section>
 
-    <section class="accident-types">
+    <section class="accident-types section-with-bg">
         <div class="container">
             <h2>Types of Accidents We Handle</h2>
             <p class="lead-text" style="text-align: center; margin-bottom: 32px; max-width: 700px; margin-left: auto; margin-right: auto;">Our California accident attorneys help injured people recover compensation for medical bills, lost wages, and pain and suffering.</p>
@@ -885,8 +934,8 @@
 
     <section class="core-trust section-with-bg">
         <div class="container">
-            <h2 style="text-align: center;">Why Choose Our California Personal Injury Attorneys</h2>
-            <p style="text-align: center; font-size: 18px; color: var(--brand-gray-700); margin-bottom: 48px; max-width: 700px; margin-left: auto; margin-right: auto;">Experienced accident attorneys who understand insurance claims and fight for maximum compensation.</p>
+            <h2 style="text-align: center; font-size: 42px; margin-bottom: 24px;">Why Choose Our California Personal Injury Attorneys</h2>
+            <p style="text-align: center; font-size: 20px; color: var(--brand-gray-700); margin-bottom: 56px; max-width: 700px; margin-left: auto; margin-right: auto; line-height: 1.7;">Experienced accident attorneys who understand insurance claims and fight for maximum compensation.</p>
             <div class="trust-grid">
                 <div class="trust-card">
                     <div class="trust-icon">⚖️</div>
@@ -1140,10 +1189,10 @@
         </div>
     </section>
 
-    <section class="case-results">
+    <section class="case-results section-with-bg">
         <div class="container">
-            <h2 style="text-align: center;">Case Results</h2>
-            <p style="text-align: center; font-size: 18px; color: var(--brand-gray-700); margin-bottom: 48px;">Millions Recovered for Injury Victims</p>
+            <h2 style="text-align: center; font-size: 42px; margin-bottom: 24px;">Case Results</h2>
+            <p style="text-align: center; font-size: 20px; color: var(--brand-gray-700); margin-bottom: 56px; line-height: 1.7;">Millions Recovered for Injury Victims</p>
             <div class="results-grid">
                 <div class="result-card">
                     <div class="result-amount">$6,000,000</div>
@@ -1164,9 +1213,9 @@
         </div>
     </section>
 
-    <section class="value-proposition">
+    <section class="value-proposition section-with-bg">
         <div class="container">
-            <h2 style="text-align: center;">Our Promise</h2>
+            <h2 style="text-align: center; font-size: 42px; margin-bottom: 24px;">Our Promise</h2>
             <div class="value-grid">
                 <div class="value-item">
                     <h3>Provide You The Maximum Compensation</h3>
@@ -1181,10 +1230,10 @@
                     <p>We'll explain your legal rights and options, and fight to protect your interests throughout the process.</p>
                 </div>
             </div>
-            <div style="margin-top: 48px; padding: 32px; background: var(--brand-white); border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
-                <h3 style="text-align: center; margin-bottom: 16px;">The Firm's Advantage</h3>
-                <p style="text-align: center; font-size: 18px; color: var(--brand-gray-700);">Available 24 Hours A Day</p>
-                <p style="text-align: center; margin-top: 16px; color: var(--brand-gray-700);">Our firm is committed to being available when you need us. We understand that accidents don't happen on a schedule, and we're here to help whenever you need to speak with an attorney.</p>
+            <div style="margin-top: 48px; padding: 40px; background: linear-gradient(135deg, var(--brand-light-blue), rgba(234, 242, 251, 0.8)); border-radius: 12px; box-shadow: 0 4px 16px rgba(0,0,0,0.1); border: 2px solid var(--brand-blue);">
+                <h3 style="text-align: center; margin-bottom: 20px; font-size: 28px; color: var(--brand-navy);">The Firm's Advantage</h3>
+                <p style="text-align: center; font-size: 22px; font-weight: 600; color: var(--brand-navy); margin-bottom: 16px;">Available 24 Hours A Day</p>
+                <p style="text-align: center; margin-top: 16px; color: var(--brand-gray-700); font-size: 18px; line-height: 1.7; max-width: 700px; margin-left: auto; margin-right: auto;">Our firm is committed to being available when you need us. We understand that accidents don't happen on a schedule, and we're here to help whenever you need to speak with an attorney.</p>
             </div>
         </div>
     </section>

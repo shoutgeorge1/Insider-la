@@ -728,19 +728,20 @@
         }
         .result-card {
             background: var(--brand-white);
-            padding: 48px 32px;
-            border-radius: 12px;
-            border: 2px solid var(--brand-light-blue);
-            text-align: center;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            padding: 36px 32px;
+            border-radius: 14px;
+            border: 2px solid rgba(18, 62, 122, 0.18);
+            text-align: left;
+            box-shadow: 0 8px 18px rgba(0,0,0,0.08);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
         }
         .result-card:hover {
             transform: translateY(-4px);
             box-shadow: 0 8px 20px rgba(0,0,0,0.12);
         }
         .result-amount {
-            font-size: 48px;
+            font-size: 44px;
             font-weight: 700;
             color: var(--brand-blue);
             margin-bottom: 12px;
@@ -751,12 +752,51 @@
             color: var(--brand-gray-700);
             font-weight: 600;
         }
+        .result-label {
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1.2px;
+            color: var(--brand-gray-500);
+            margin-bottom: 12px;
+        }
+        .result-meta {
+            margin-top: 14px;
+            font-size: 13px;
+            color: var(--brand-gray-500);
+        }
         .reviews-section {
             background: var(--brand-white);
         }
         .reviews-header {
             text-align: center;
             margin-bottom: 48px;
+        }
+        .review-badges {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin: 20px 0 8px;
+        }
+        .review-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 8px 14px;
+            border-radius: 999px;
+            background: rgba(11, 45, 82, 0.08);
+            border: 1px solid rgba(18, 62, 122, 0.18);
+        }
+        .review-badge img {
+            height: 28px;
+            width: auto;
+        }
+        .review-badge-stars {
+            color: var(--brand-accent-yellow);
+            letter-spacing: 2px;
+            font-size: 14px;
+            font-weight: 700;
         }
         .rating-display {
             font-size: 48px;
@@ -789,6 +829,30 @@
         }
         .value-proposition {
             background: var(--brand-light-blue);
+        }
+        .promise-header {
+            text-align: center;
+            margin-bottom: 24px;
+        }
+        .promise-badge {
+            display: inline-block;
+            padding: 6px 16px;
+            border-radius: 999px;
+            border: 1px solid rgba(18, 62, 122, 0.25);
+            color: var(--brand-navy);
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            font-size: 12px;
+            background: rgba(255, 255, 255, 0.8);
+        }
+        .advantage-card {
+            margin-top: 48px;
+            padding: 44px;
+            background: linear-gradient(135deg, #f8fbff, rgba(234, 242, 251, 0.9));
+            border-radius: 14px;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+            border: 2px solid rgba(18, 62, 122, 0.25);
         }
         .value-grid {
             display: grid;
@@ -1051,14 +1115,14 @@
                         <div class="trust-bar-item">
                             <img src="images/la/google-rating.png" alt="Google 5 Star Rating" class="trust-bar-logo">
                             <div class="trust-bar-rating">
-                                <div class="trust-bar-text">Almost 5 Stars</div>
+                                <div class="trust-bar-text">Top Rated</div>
                                 <div class="trust-bar-stars">★★★★★</div>
                             </div>
                         </div>
                         <div class="trust-bar-item">
                             <img src="images/la/yelp-logo.jpg" alt="Yelp" class="trust-bar-logo">
                             <div class="trust-bar-rating">
-                                <div class="trust-bar-text">Almost 5 Stars</div>
+                                <div class="trust-bar-text">Top Rated</div>
                                 <div class="trust-bar-stars">★★★★★</div>
                             </div>
                         </div>
@@ -1277,6 +1341,16 @@
             <div class="reviews-header">
                 <h2>What Our Clients Say</h2>
                 <p style="font-size: 18px; color: var(--brand-gray-700); margin-bottom: 24px;">Real reviews from real clients across Los Angeles County</p>
+                <div class="review-badges">
+                    <div class="review-badge">
+                        <img src="images/la/google-rating.png" alt="Google 5 Star Rating">
+                        <div class="review-badge-stars">★★★★★</div>
+                    </div>
+                    <div class="review-badge">
+                        <img src="images/la/yelp-logo.jpg" alt="Yelp">
+                        <div class="review-badge-stars">★★★★★</div>
+                    </div>
+                </div>
             </div>
             <div class="review-cards">
                 <div class="review-card">
@@ -1428,27 +1502,33 @@
             <p style="text-align: center; font-size: 20px; color: var(--brand-gray-700); margin-bottom: 56px; line-height: 1.7;">Millions Recovered for Injury Victims</p>
             <div class="results-grid">
                 <div class="result-card">
+                    <div class="result-label">Settlement</div>
                     <div class="result-amount">$6,000,000</div>
                     <div class="result-type">Car Accident</div>
+                    <div class="result-meta">Results depend on the facts of each case.</div>
                 </div>
                 <div class="result-card">
+                    <div class="result-label">Settlement</div>
                     <div class="result-amount">$2,400,000</div>
                     <div class="result-type">Bicycle Accident</div>
+                    <div class="result-meta">Results depend on the facts of each case.</div>
                 </div>
                 <div class="result-card">
+                    <div class="result-label">Settlement</div>
                     <div class="result-amount">$2,500,000</div>
                     <div class="result-type">Wrongful Death</div>
+                    <div class="result-meta">Results depend on the facts of each case.</div>
                 </div>
-            </div>
-            <div style="text-align: center; margin-top: 48px;">
-                <p style="font-size: 16px; color: var(--brand-gray-700);">View More Case Results</p>
             </div>
         </div>
     </section>
 
     <section class="value-proposition section-with-bg">
         <div class="container">
-            <h2 style="text-align: center; font-size: 42px; margin-bottom: 24px;">Our Promise</h2>
+            <div class="promise-header">
+                <span class="promise-badge">Official Commitment</span>
+                <h2 style="text-align: center; font-size: 42px; margin-bottom: 24px;">Our Promise</h2>
+            </div>
             <div class="value-grid">
                 <div class="value-item">
                     <h3>Provide You The Maximum Compensation</h3>
@@ -1463,7 +1543,10 @@
                     <p>We'll explain your legal rights and options, and fight to protect your interests throughout the process.</p>
                 </div>
             </div>
-            <div style="margin-top: 48px; padding: 40px; background: linear-gradient(135deg, var(--brand-light-blue), rgba(234, 242, 251, 0.8)); border-radius: 12px; box-shadow: 0 4px 16px rgba(0,0,0,0.1); border: 2px solid var(--brand-blue);">
+            <div class="advantage-card">
+                <div class="promise-header" style="margin-bottom: 16px;">
+                    <span class="promise-badge">Firm Policy</span>
+                </div>
                 <h3 style="text-align: center; margin-bottom: 20px; font-size: 28px; color: var(--brand-navy);">The Firm's Advantage</h3>
                 <p style="text-align: center; font-size: 22px; font-weight: 600; color: var(--brand-navy); margin-bottom: 16px;">Available 24 Hours A Day</p>
                 <p style="text-align: center; margin-top: 16px; color: var(--brand-gray-700); font-size: 18px; line-height: 1.7; max-width: 700px; margin-left: auto; margin-right: auto;">Our firm is committed to being available when you need us. We understand that accidents don't happen on a schedule, and we're here to help whenever you need to speak with an attorney.</p>

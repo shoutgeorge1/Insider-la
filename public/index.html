@@ -273,11 +273,27 @@
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
             backdrop-filter: blur(6px);
         }
-        .see-through-bar span {
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            font-size: 12px;
+        .trust-bar-items {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 24px;
+            flex-wrap: wrap;
+        }
+        .trust-bar-logo {
+            height: 36px;
+            width: auto;
+            object-fit: contain;
+        }
+        .trust-bar-text {
+            font-size: 14px;
             font-weight: 600;
+            letter-spacing: 0.4px;
+        }
+        @media (max-width: 768px) {
+            .see-through-bar .see-through-inner {
+                border-radius: 16px;
+            }
         }
         .case-card:hover {
             transform: translateY(-4px);
@@ -993,12 +1009,6 @@
         </div>
     </section>
 
-    <section class="see-through-bar section-with-bg">
-        <div class="see-through-inner">
-            <span>Los Angeles County • Free Consultation • No Fee Unless We Win</span>
-        </div>
-    </section>
-
     <section class="trust-badges-section">
         <div class="trust-badges-container">
             <div class="trust-badges-headline">Trusted & Recognized By</div>
@@ -1008,6 +1018,16 @@
                 <img src="images/la/trust-badge-3.webp" alt="Trust Badge" class="trust-badge-img">
                 <img src="images/la/lacba.jpg" alt="LACBA" class="trust-badge-img" style="height: 100px; width: auto; object-fit: contain;">
                 <img src="images/la/trust-badge-4.webp" alt="Trust Badge" class="trust-badge-img">
+            </div>
+        </div>
+    </section>
+
+    <section class="see-through-bar section-with-bg">
+        <div class="see-through-inner">
+            <div class="trust-bar-items">
+                <img src="images/la/google-rating.png" alt="Google 5 Star Rating" class="trust-bar-logo">
+                <div class="trust-bar-text">Yelp 5.0 ★★★★★</div>
+                <div class="trust-bar-text">500+ 5-Star Reviews</div>
             </div>
         </div>
     </section>
